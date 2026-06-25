@@ -66,7 +66,7 @@ Removing the `[ACTION]+[OBS]` tool-execution channel from the input drops step l
 from agentsight_sdk import AgentMonitor
 
 # Auto-downloads weights from this repo
-monitor = AgentMonitor("YOUR_HF_USERNAME/agentsight")
+monitor = AgentMonitor("talha1234567/Agentic-Ai")
 
 result = monitor.evaluate_trajectory(raw_trajectory_dict)
 

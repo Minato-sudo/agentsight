@@ -36,7 +36,7 @@ sys.path.insert(0, str(_HERE))
 from src.models.agentsight import AgentSightModel
 from src.data.preprocessor import StepPreprocessor
 
-_HF_REPO_ID = "YOUR_HF_USERNAME/agentsight"   # ← update after HF upload (GH: Minato-sudo/agentsight)
+_HF_REPO_ID = "talha1234567/Agentic-Ai"   # HuggingFace: https://huggingface.co/talha1234567/Agentic-Ai
 _DEFAULT_THRESHOLD = 0.40
 
 
