@@ -26,7 +26,7 @@ from typing import Any
 _ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(_ROOT))
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
@@ -198,6 +198,57 @@ def analyze(request: AnalyzeRequest):
         "processing_time_ms": round(elapsed_ms, 1),
     }
 
+
+@app.websocket("/ws/analyze")
+async def websocket_analyze(websocket: WebSocket):
+    """
+    Real-time streaming analysis endpoint.
+    Send steps as JSON messages and get immediate feedback.
+    """
+    await websocket.accept()
+    api = get_api()
+    
+    trajectory = []
+    query = "Unknown query"
+    
+    try:
+        while True:
+            data = await websocket.receive_json()
+            
+            # Handle initial query setup if passed
+            if "query" in data and not "step" in data:
+                query = data["query"]
+                await websocket.send_json({"status": "query_set"})
+                continue
+                
+            # Add step to trajectory
+            if "step" in data:
+                trajectory.append({
+                    "step": data.get("step", len(trajectory) + 1),
+                    "content": data.get("content", ""),
+                    "tool_calls": [{"name": data.get("action", ""), "arguments": data.get("arguments", {})}],
+                    "tool_responses": [data.get("observation", "")]
+                })
+                
+                # Evaluate current trajectory
+                result = api.detect(query=query, trajectory=trajectory)
+                
+                # Send back the latest step analysis and verdict
+                await websocket.send_json({
+                    "step": trajectory[-1]["step"],
+                    "is_hallucinated": result["is_hallucinated"],
+                    "max_hallucination_prob": result["max_hallucination_prob"],
+                    "predicted_root_cause_step": result["predicted_root_cause_step"],
+                    "latest_step_prob": result["step_probabilities"][-1] if result["step_probabilities"] else 0.0
+                })
+    except WebSocketDisconnect:
+        print("WebSocket client disconnected")
+    except Exception as e:
+        print(f"WebSocket error: {e}")
+        try:
+            await websocket.send_json({"error": str(e)})
+        except:
+            pass
 
 # ── Dev entry point ───────────────────────────────────────────────────────────
 if __name__ == "__main__":

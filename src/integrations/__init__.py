@@ -1,1 +1,1 @@
-from src.integrations.langchain import AgentSightCallback
+from src.integrations.langchain_callback import AgentSightCallback
