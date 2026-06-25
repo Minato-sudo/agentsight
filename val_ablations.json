@@ -1,0 +1,4153 @@
+{
+  "note": "Ablations evaluated on val.json only. test.json is sealed.",
+  "test_json_sha256": "9604aae8eb5aec4ae666cfbe3053910f0570a807a4fa5515223dbca1aa66a7d8",
+  "threshold_used": 0.3999999999999999,
+  "summary": {
+    "Full Model": {
+      "step_acc": 0.48484848484848486,
+      "judgment_f1": 0.6160298229263746,
+      "step_correct": 32,
+      "n_hal": 66
+    },
+    "No Tool Context": {
+      "step_acc": 0.16666666666666666,
+      "judgment_f1": 0.4562594268476622,
+      "step_correct": 11,
+      "n_hal": 66
+    },
+    "No Query Context": {
+      "step_acc": 0.3939393939393939,
+      "judgment_f1": 0.509679466835925,
+      "step_correct": 26,
+      "n_hal": 66
+    },
+    "No Cross-Step": {
+      "step_acc": 0.5151515151515151,
+      "judgment_f1": 0.5451625853071056,
+      "step_correct": 34,
+      "n_hal": 66
+    }
+  },
+  "per_trajectory": [
+    {
+      "condition": "Full Model",
+      "sample_idx": 0,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 2,
+      "pred_is_hallucination": true,
+      "pred_step": 7,
+      "max_hal_prob": 0.9904400110244751,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 1,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 12,
+      "max_hal_prob": 0.9864394664764404,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 2,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 6,
+      "pred_is_hallucination": true,
+      "pred_step": 6,
+      "max_hal_prob": 0.9978772401809692,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 3,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.27451181411743164,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 4,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.8195643424987793,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 5,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 2,
+      "pred_is_hallucination": true,
+      "pred_step": 2,
+      "max_hal_prob": 0.9907113909721375,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 6,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 2,
+      "max_hal_prob": 0.8641038537025452,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 7,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.994164764881134,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 8,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 6,
+      "pred_is_hallucination": true,
+      "pred_step": 17,
+      "max_hal_prob": 0.9953380823135376,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 9,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.9946386218070984,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 10,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9968118071556091,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 11,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 4,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.9107142686843872,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 12,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 7,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.3308551609516144,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 13,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9924682974815369,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 14,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 4,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.523982584476471,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 15,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 7,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.24622435867786407,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 16,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.9976473450660706,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 17,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 11,
+      "pred_is_hallucination": true,
+      "pred_step": 11,
+      "max_hal_prob": 0.995788037776947,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 18,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 4,
+      "pred_is_hallucination": true,
+      "pred_step": 6,
+      "max_hal_prob": 0.9934908747673035,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 19,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.961624026298523,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 20,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.5090392827987671,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 21,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9928169250488281,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 22,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 5,
+      "pred_is_hallucination": true,
+      "pred_step": 5,
+      "max_hal_prob": 0.9944683313369751,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 23,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9917179346084595,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 24,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 7,
+      "pred_is_hallucination": true,
+      "pred_step": 5,
+      "max_hal_prob": 0.9293662905693054,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 25,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 5,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.24493204057216644,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 26,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.9859850406646729,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 27,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 9,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.9353591799736023,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 28,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 10,
+      "pred_is_hallucination": true,
+      "pred_step": 11,
+      "max_hal_prob": 0.8151468634605408,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 29,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.996912956237793,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 30,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 2,
+      "pred_is_hallucination": true,
+      "pred_step": 4,
+      "max_hal_prob": 0.9974197149276733,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 31,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9961509704589844,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 32,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 4,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.987713098526001,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 33,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 2,
+      "pred_is_hallucination": true,
+      "pred_step": 4,
+      "max_hal_prob": 0.9971893429756165,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 34,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 2,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.9921157956123352,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 35,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 5,
+      "pred_is_hallucination": true,
+      "pred_step": 5,
+      "max_hal_prob": 0.9959695339202881,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 36,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.8288347721099854,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 37,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.9569130539894104,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 38,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 6,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.26955151557922363,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 39,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9974086880683899,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 40,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 16,
+      "pred_is_hallucination": true,
+      "pred_step": 16,
+      "max_hal_prob": 0.9959813356399536,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 41,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.9972002506256104,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 42,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9686429500579834,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 43,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 2,
+      "pred_is_hallucination": true,
+      "pred_step": 2,
+      "max_hal_prob": 0.9955388903617859,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 44,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 8,
+      "max_hal_prob": 0.5610406398773193,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 45,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.997951090335846,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 46,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.9960165619850159,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 47,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 2,
+      "pred_is_hallucination": true,
+      "pred_step": 2,
+      "max_hal_prob": 0.9968546032905579,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 48,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 6,
+      "pred_is_hallucination": true,
+      "pred_step": 9,
+      "max_hal_prob": 0.8714358806610107,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 49,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 2,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9903794527053833,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 50,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.9976576566696167,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 51,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 8,
+      "pred_is_hallucination": true,
+      "pred_step": 5,
+      "max_hal_prob": 0.9937211275100708,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 52,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.2705044746398926,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 53,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9974393844604492,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 54,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 4,
+      "pred_is_hallucination": true,
+      "pred_step": 12,
+      "max_hal_prob": 0.9919899106025696,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 55,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 7,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.6489900350570679,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 56,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 6,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.3342665135860443,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 57,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.260468453168869,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 58,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 5,
+      "pred_is_hallucination": true,
+      "pred_step": 5,
+      "max_hal_prob": 0.9956008195877075,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 59,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 5,
+      "pred_is_hallucination": true,
+      "pred_step": 5,
+      "max_hal_prob": 0.9933232665061951,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 60,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.976436972618103,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 61,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9939842820167542,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 62,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 4,
+      "pred_is_hallucination": true,
+      "pred_step": 4,
+      "max_hal_prob": 0.9941465854644775,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 63,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.9882936477661133,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 64,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 11,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.993370532989502,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 65,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.98655104637146,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 66,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.32039153575897217,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 67,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.7713825702667236,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 68,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.9960506558418274,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 69,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.19777604937553406,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 70,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 2,
+      "max_hal_prob": 0.9970721006393433,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 71,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 2,
+      "max_hal_prob": 0.9918447136878967,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 72,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9978320002555847,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 73,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 4,
+      "max_hal_prob": 0.9976007342338562,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 74,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.21958060562610626,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 75,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 5,
+      "max_hal_prob": 0.980080246925354,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 76,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9931951761245728,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 77,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.997212827205658,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 78,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.9976180195808411,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 79,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9911632537841797,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 80,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 2,
+      "max_hal_prob": 0.908493161201477,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 81,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9965443015098572,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 82,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.2398960441350937,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 83,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.26520758867263794,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 84,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 6,
+      "max_hal_prob": 0.9974358677864075,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 85,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 5,
+      "max_hal_prob": 0.990743100643158,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 86,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.38155418634414673,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 87,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9937438368797302,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 88,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.82535320520401,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 89,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.9900859594345093,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 90,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 2,
+      "max_hal_prob": 0.9850518703460693,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 91,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 2,
+      "max_hal_prob": 0.5916812419891357,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 92,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 2,
+      "max_hal_prob": 0.9225026369094849,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 93,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.34422561526298523,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 94,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 2,
+      "max_hal_prob": 0.9709472060203552,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 95,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.2123042792081833,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 96,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.3954640030860901,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 97,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.9937363862991333,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 98,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 5,
+      "max_hal_prob": 0.995191216468811,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 99,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.38995328545570374,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 100,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.2617228031158447,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 101,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.21755659580230713,
+      "encoding_failed": false
+    },
+    {
+      "condition": "Full Model",
+      "sample_idx": 102,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.2553284466266632,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 0,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 2,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9026739597320557,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 1,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.2493726909160614,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 2,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 6,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9798122644424438,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 3,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.2152387797832489,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 4,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.8195643424987793,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 5,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 2,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.36531174182891846,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 6,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.36250537633895874,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 7,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.23192329704761505,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 8,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 6,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.30628761649131775,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 9,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.2622320353984833,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 10,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9967515468597412,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 11,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 4,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.32908064126968384,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 12,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 7,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.26364219188690186,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 13,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9946816563606262,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 14,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 4,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.2080424576997757,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 15,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 7,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.2542893886566162,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 16,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 4,
+      "max_hal_prob": 0.7593112587928772,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 17,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 11,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.2658848762512207,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 18,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 4,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.22865670919418335,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 19,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9928436875343323,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 20,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.5090392827987671,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 21,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9937008619308472,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 22,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 5,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9761826395988464,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 23,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.699882447719574,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 24,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 7,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.2281443029642105,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 25,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 5,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.21594181656837463,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 26,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.2168932855129242,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 27,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 9,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.2602129876613617,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 28,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 10,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.24931956827640533,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 29,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.2396848201751709,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 30,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 2,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.34320175647735596,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 31,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 2,
+      "max_hal_prob": 0.9938884973526001,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 32,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 4,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.983248233795166,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 33,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 2,
+      "pred_is_hallucination": true,
+      "pred_step": 5,
+      "max_hal_prob": 0.9756336212158203,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 34,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 2,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.989281415939331,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 35,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 5,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.24905183911323547,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 36,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.2967686653137207,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 37,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.2426154911518097,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 38,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 6,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.26145732402801514,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 39,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.21435217559337616,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 40,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 16,
+      "pred_is_hallucination": true,
+      "pred_step": 17,
+      "max_hal_prob": 0.994513750076294,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 41,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.997246503829956,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 42,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9575594067573547,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 43,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 2,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.2218865603208542,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 44,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.26174160838127136,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 45,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9979349374771118,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 46,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.19322296977043152,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 47,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 2,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.20695389807224274,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 48,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 6,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.28959324955940247,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 49,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 2,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.27846381068229675,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 50,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 13,
+      "max_hal_prob": 0.8647165298461914,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 51,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 8,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.1930222511291504,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 52,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.37525051832199097,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 53,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.17767344415187836,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 54,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 4,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.19640228152275085,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 55,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 7,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.21588119864463806,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 56,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 6,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.38941723108291626,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 57,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.22091589868068695,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 58,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 5,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.21985575556755066,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 59,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 5,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.19747182726860046,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 60,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9653911590576172,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 61,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9940213561058044,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 62,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 4,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.26434633135795593,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 63,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.23832689225673676,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 64,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 11,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9922284483909607,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 65,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.24582254886627197,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 66,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.22103175520896912,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 67,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.7713825702667236,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 68,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.2759448289871216,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 69,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.19528207182884216,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 70,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.638725221157074,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 71,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.20556946098804474,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 72,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9979287385940552,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 73,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9954257607460022,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 74,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.2104300707578659,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 75,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.34521833062171936,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 76,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9916018843650818,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 77,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9965433478355408,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 78,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 5,
+      "max_hal_prob": 0.7227516174316406,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 79,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9898339509963989,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 80,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.2127513289451599,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 81,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9966915845870972,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 82,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.2293047457933426,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 83,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.2311912477016449,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 84,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 6,
+      "max_hal_prob": 0.9969863295555115,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 85,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.23855477571487427,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 86,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.33355531096458435,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 87,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.2941490411758423,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 88,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.267040491104126,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 89,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.21834906935691833,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 90,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9782320857048035,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 91,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.1962873637676239,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 92,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.22332541644573212,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 93,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.2223992794752121,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 94,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.19779087603092194,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 95,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.20046895742416382,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 96,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.47334158420562744,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 97,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.2581767737865448,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 98,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9600647687911987,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 99,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.3158678412437439,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 100,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.32433274388313293,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 101,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.20163805782794952,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Tool Context",
+      "sample_idx": 102,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.21664419770240784,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 0,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 2,
+      "pred_is_hallucination": true,
+      "pred_step": 7,
+      "max_hal_prob": 0.9749572277069092,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 1,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.2851178050041199,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 2,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 6,
+      "pred_is_hallucination": true,
+      "pred_step": 6,
+      "max_hal_prob": 0.9974561333656311,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 3,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.2701495885848999,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 4,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.2238815277814865,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 5,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 2,
+      "pred_is_hallucination": true,
+      "pred_step": 2,
+      "max_hal_prob": 0.9919801950454712,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 6,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.68656325340271,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 7,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.3958114683628082,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 8,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 6,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.32427871227264404,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 9,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.9951245188713074,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 10,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9949072003364563,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 11,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 4,
+      "pred_is_hallucination": true,
+      "pred_step": 2,
+      "max_hal_prob": 0.994696855545044,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 12,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 7,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.21893885731697083,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 13,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9968275427818298,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 14,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 4,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.3591192960739136,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 15,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 7,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.2089807093143463,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 16,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.997412383556366,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 17,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 11,
+      "pred_is_hallucination": true,
+      "pred_step": 11,
+      "max_hal_prob": 0.9955793023109436,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 18,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 4,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.3721851408481598,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 19,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 2,
+      "max_hal_prob": 0.537128210067749,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 20,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.2241823822259903,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 21,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9940682649612427,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 22,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 5,
+      "pred_is_hallucination": true,
+      "pred_step": 4,
+      "max_hal_prob": 0.9945024251937866,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 23,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.8557687401771545,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 24,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 7,
+      "pred_is_hallucination": true,
+      "pred_step": 5,
+      "max_hal_prob": 0.9834180474281311,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 25,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 5,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.250117689371109,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 26,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.9703649282455444,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 27,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 9,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.9164025783538818,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 28,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 10,
+      "pred_is_hallucination": true,
+      "pred_step": 6,
+      "max_hal_prob": 0.4328446090221405,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 29,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.996329128742218,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 30,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 2,
+      "pred_is_hallucination": true,
+      "pred_step": 4,
+      "max_hal_prob": 0.9976159334182739,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 31,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9973865151405334,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 32,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 4,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9895572066307068,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 33,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 2,
+      "pred_is_hallucination": true,
+      "pred_step": 4,
+      "max_hal_prob": 0.9970894455909729,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 34,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 2,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9582459926605225,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 35,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 5,
+      "pred_is_hallucination": true,
+      "pred_step": 5,
+      "max_hal_prob": 0.995434582233429,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 36,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.9183759093284607,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 37,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.211843341588974,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 38,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 6,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.20962098240852356,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 39,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9920949339866638,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 40,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 16,
+      "pred_is_hallucination": true,
+      "pred_step": 16,
+      "max_hal_prob": 0.9957693815231323,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 41,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9940218329429626,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 42,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9393110275268555,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 43,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 2,
+      "pred_is_hallucination": true,
+      "pred_step": 2,
+      "max_hal_prob": 0.5471336841583252,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 44,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.23783360421657562,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 45,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9975810050964355,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 46,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.9960391521453857,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 47,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 2,
+      "pred_is_hallucination": true,
+      "pred_step": 2,
+      "max_hal_prob": 0.9969285130500793,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 48,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 6,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.21512797474861145,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 49,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 2,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.24076905846595764,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 50,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.9969747066497803,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 51,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 8,
+      "pred_is_hallucination": true,
+      "pred_step": 5,
+      "max_hal_prob": 0.9926877021789551,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 52,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.2320563793182373,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 53,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9967491626739502,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 54,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 4,
+      "pred_is_hallucination": true,
+      "pred_step": 5,
+      "max_hal_prob": 0.9914217591285706,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 55,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 7,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.22899140417575836,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 56,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 6,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.2605549693107605,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 57,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.2586498558521271,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 58,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 5,
+      "pred_is_hallucination": true,
+      "pred_step": 5,
+      "max_hal_prob": 0.9949679970741272,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 59,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 5,
+      "pred_is_hallucination": true,
+      "pred_step": 5,
+      "max_hal_prob": 0.9923203587532043,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 60,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.9685057401657104,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 61,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.6243091821670532,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 62,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 4,
+      "pred_is_hallucination": true,
+      "pred_step": 4,
+      "max_hal_prob": 0.9942731261253357,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 63,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.9808361530303955,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 64,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 11,
+      "pred_is_hallucination": true,
+      "pred_step": 9,
+      "max_hal_prob": 0.9933886528015137,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 65,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.9849016070365906,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 66,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.2140617072582245,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 67,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9893749952316284,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 68,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.9959756731987,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 69,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.1967109590768814,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 70,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 2,
+      "max_hal_prob": 0.9519364833831787,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 71,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 2,
+      "max_hal_prob": 0.9886794686317444,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 72,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9967161417007446,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 73,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 4,
+      "max_hal_prob": 0.9967073202133179,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 74,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.19229625165462494,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 75,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9908701777458191,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 76,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9970250725746155,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 77,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9973310232162476,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 78,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.9971632361412048,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 79,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9836428761482239,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 80,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.2276969701051712,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 81,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.9702904224395752,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 82,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.24850113689899445,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 83,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.2079203873872757,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 84,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 6,
+      "max_hal_prob": 0.9965221881866455,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 85,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 5,
+      "max_hal_prob": 0.9936875700950623,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 86,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 5,
+      "max_hal_prob": 0.41382816433906555,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 87,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.8432375192642212,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 88,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.728646993637085,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 89,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.9861423373222351,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 90,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.9563025832176208,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 91,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 2,
+      "max_hal_prob": 0.7424764037132263,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 92,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 2,
+      "max_hal_prob": 0.9535768628120422,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 93,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.33795592188835144,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 94,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 4,
+      "max_hal_prob": 0.9757136106491089,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 95,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.22418536245822906,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 96,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.8256799578666687,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 97,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.9904795289039612,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 98,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 5,
+      "max_hal_prob": 0.951848566532135,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 99,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.216583251953125,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 100,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.26403170824050903,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 101,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.20193998515605927,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Query Context",
+      "sample_idx": 102,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.23266835510730743,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 0,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 2,
+      "pred_is_hallucination": true,
+      "pred_step": 7,
+      "max_hal_prob": 0.5532724857330322,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 1,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 12,
+      "max_hal_prob": 0.5728338360786438,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 2,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 6,
+      "pred_is_hallucination": true,
+      "pred_step": 6,
+      "max_hal_prob": 0.6388838291168213,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 3,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 2,
+      "max_hal_prob": 0.44469016790390015,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 4,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.4850986897945404,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 5,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 2,
+      "pred_is_hallucination": true,
+      "pred_step": 2,
+      "max_hal_prob": 0.5563082695007324,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 6,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 2,
+      "max_hal_prob": 0.5149946808815002,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 7,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.5975703001022339,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 8,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 6,
+      "pred_is_hallucination": true,
+      "pred_step": 17,
+      "max_hal_prob": 0.6082697510719299,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 9,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.6068992614746094,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 10,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.6185764670372009,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 11,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 4,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.5500826239585876,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 12,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 7,
+      "pred_is_hallucination": true,
+      "pred_step": 10,
+      "max_hal_prob": 0.43605145812034607,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 13,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.5878342986106873,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 14,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 4,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.46910789608955383,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 15,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 7,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.36742427945137024,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 16,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.6258564591407776,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 17,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 11,
+      "pred_is_hallucination": true,
+      "pred_step": 11,
+      "max_hal_prob": 0.6283565759658813,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 18,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 4,
+      "pred_is_hallucination": true,
+      "pred_step": 6,
+      "max_hal_prob": 0.5977264642715454,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 19,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 2,
+      "max_hal_prob": 0.6011820435523987,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 20,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.4982157349586487,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 21,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.5736673474311829,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 22,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 5,
+      "pred_is_hallucination": true,
+      "pred_step": 5,
+      "max_hal_prob": 0.5927421450614929,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 23,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.5638861060142517,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 24,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 7,
+      "pred_is_hallucination": true,
+      "pred_step": 10,
+      "max_hal_prob": 0.5321228504180908,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 25,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 5,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.3904556334018707,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 26,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.5540704727172852,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 27,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 9,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.507172167301178,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 28,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 10,
+      "pred_is_hallucination": true,
+      "pred_step": 11,
+      "max_hal_prob": 0.5221924185752869,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 29,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.6362930536270142,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 30,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 2,
+      "pred_is_hallucination": true,
+      "pred_step": 4,
+      "max_hal_prob": 0.6186770796775818,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 31,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.6189255714416504,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 32,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 4,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.5483059883117676,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 33,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 2,
+      "pred_is_hallucination": true,
+      "pred_step": 4,
+      "max_hal_prob": 0.6171848773956299,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 34,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 2,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.576711893081665,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 35,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 5,
+      "pred_is_hallucination": true,
+      "pred_step": 5,
+      "max_hal_prob": 0.601061224937439,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 36,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.5495870113372803,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 37,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.5360502004623413,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 38,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 6,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.3915834128856659,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 39,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.6153927445411682,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 40,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 16,
+      "pred_is_hallucination": true,
+      "pred_step": 16,
+      "max_hal_prob": 0.6176396608352661,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 41,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.6359508633613586,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 42,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.5313746333122253,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 43,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 2,
+      "pred_is_hallucination": true,
+      "pred_step": 2,
+      "max_hal_prob": 0.6008106470108032,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 44,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 8,
+      "max_hal_prob": 0.5025410652160645,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 45,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.633219838142395,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 46,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.6011356711387634,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 47,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 2,
+      "pred_is_hallucination": true,
+      "pred_step": 2,
+      "max_hal_prob": 0.6300095915794373,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 48,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 6,
+      "pred_is_hallucination": true,
+      "pred_step": 9,
+      "max_hal_prob": 0.5081746578216553,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 49,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 2,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.5586811304092407,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 50,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.6260326504707336,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 51,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 8,
+      "pred_is_hallucination": true,
+      "pred_step": 5,
+      "max_hal_prob": 0.5892447829246521,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 52,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.44654572010040283,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 53,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.6337594985961914,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 54,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 4,
+      "pred_is_hallucination": true,
+      "pred_step": 12,
+      "max_hal_prob": 0.5867634415626526,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 55,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 7,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.4827863574028015,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 56,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 6,
+      "pred_is_hallucination": true,
+      "pred_step": 8,
+      "max_hal_prob": 0.4656273424625397,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 57,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.41322773694992065,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 58,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 5,
+      "pred_is_hallucination": true,
+      "pred_step": 5,
+      "max_hal_prob": 0.608658492565155,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 59,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 5,
+      "pred_is_hallucination": true,
+      "pred_step": 5,
+      "max_hal_prob": 0.5787057876586914,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 60,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.6076561808586121,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 61,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.582955002784729,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 62,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 4,
+      "pred_is_hallucination": true,
+      "pred_step": 4,
+      "max_hal_prob": 0.6149190068244934,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 63,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 3,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.5763958692550659,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 64,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 11,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.5849462151527405,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 65,
+      "true_is_hallucination": true,
+      "true_hallucination_step": 1,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.5562973618507385,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 66,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.437574565410614,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 67,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.5923222303390503,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 68,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.6124688386917114,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 69,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.3304294943809509,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 70,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 2,
+      "max_hal_prob": 0.6140521168708801,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 71,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 2,
+      "max_hal_prob": 0.5668413639068604,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 72,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.6096437573432922,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 73,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 4,
+      "max_hal_prob": 0.6348525285720825,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 74,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.36292582750320435,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 75,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 5,
+      "max_hal_prob": 0.5906472206115723,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 76,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.5735272765159607,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 77,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.6111056804656982,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 78,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.6293560862541199,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 79,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.5565862059593201,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 80,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 2,
+      "max_hal_prob": 0.5134647488594055,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 81,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.5940109491348267,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 82,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.39741089940071106,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 83,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.3954544961452484,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 84,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 6,
+      "max_hal_prob": 0.620197057723999,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 85,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 5,
+      "max_hal_prob": 0.5764421224594116,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 86,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.479724258184433,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 87,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.61048823595047,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 88,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.5048233270645142,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 89,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.5761980414390564,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 90,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 2,
+      "max_hal_prob": 0.5622239708900452,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 91,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 2,
+      "max_hal_prob": 0.4811176657676697,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 92,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 2,
+      "max_hal_prob": 0.519911527633667,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 93,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 8,
+      "max_hal_prob": 0.4335610270500183,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 94,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 4,
+      "max_hal_prob": 0.5672821998596191,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 95,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.3735003173351288,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 96,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 1,
+      "max_hal_prob": 0.4546927809715271,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 97,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.5920228362083435,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 98,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 5,
+      "max_hal_prob": 0.5988920331001282,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 99,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 7,
+      "max_hal_prob": 0.4582280218601227,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 100,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": true,
+      "pred_step": 3,
+      "max_hal_prob": 0.4324427843093872,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 101,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.3520043194293976,
+      "encoding_failed": false
+    },
+    {
+      "condition": "No Cross-Step",
+      "sample_idx": 102,
+      "true_is_hallucination": false,
+      "true_hallucination_step": null,
+      "pred_is_hallucination": false,
+      "pred_step": null,
+      "max_hal_prob": 0.3613990247249603,
+      "encoding_failed": false
+    }
+  ]
+}

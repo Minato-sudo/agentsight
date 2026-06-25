@@ -1,0 +1,186 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Using device: cuda
+Loading tokenizer …
+Building dataloaders (WeightedRandomSampler=True) …
+Initialising AgentSightModel …
+Loading weights:   0%|          | 0/198 [00:00<?, ?it/s]Loading weights:   2%|▏         | 3/198 [00:00<00:09, 20.44it/s]Loading weights: 100%|██████████| 198/198 [00:00<00:00, 1320.38it/s]
+[transformers] [1mDebertaV2Model LOAD REPORT[0m from: microsoft/deberta-v3-base
+Key                                     | Status     |  | 
+----------------------------------------+------------+--+-
+mask_predictions.LayerNorm.bias         | UNEXPECTED |  | 
+mask_predictions.dense.weight           | UNEXPECTED |  | 
+mask_predictions.classifier.bias        | UNEXPECTED |  | 
+lm_predictions.lm_head.LayerNorm.weight | UNEXPECTED |  | 
+mask_predictions.dense.bias             | UNEXPECTED |  | 
+lm_predictions.lm_head.bias             | UNEXPECTED |  | 
+mask_predictions.LayerNorm.weight       | UNEXPECTED |  | 
+lm_predictions.lm_head.dense.bias       | UNEXPECTED |  | 
+lm_predictions.lm_head.LayerNorm.bias   | UNEXPECTED |  | 
+mask_predictions.classifier.weight      | UNEXPECTED |  | 
+lm_predictions.lm_head.dense.weight     | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+trainable params: 2,654,208 || all params: 186,485,760 || trainable%: 1.4233
+Computing class weights from training data …
+  pos_weight = 13.71
+
+Starting training for up to 50 epochs (patience=15) …
+
+── Epoch 1/50 ──────────────────────────────
+  Train loss : 1.5073  |  LR: 6.05e-06
+  Val threshold tuning → thr=0.20  macro-F1=39.1%
+  Val step-acc : 25.8%  |  F1 : 39.1%  |  Recall : 50.0%  |  Precision : 32.0%
+  [✓] New best model saved  (step-acc=25.8%,  thr=0.20)
+── Epoch 2/50 ──────────────────────────────
+  Train loss : 1.4474  |  LR: 1.21e-05
+  Val threshold tuning → thr=0.20  macro-F1=39.1%
+  Val step-acc : 22.7%  |  F1 : 39.1%  |  Recall : 50.0%  |  Precision : 32.0%
+  No improvement for 1/15 epochs.
+── Epoch 3/50 ──────────────────────────────
+  Train loss : 1.4866  |  LR: 1.81e-05
+  Val threshold tuning → thr=0.50  macro-F1=52.4%
+  Val step-acc : 25.8%  |  F1 : 52.4%  |  Recall : 52.7%  |  Precision : 53.3%
+  No improvement for 2/15 epochs.
+── Epoch 4/50 ──────────────────────────────
+  Train loss : 1.3799  |  LR: 2.42e-05
+  Val threshold tuning → thr=0.56  macro-F1=56.2%
+  Val step-acc : 13.6%  |  F1 : 56.2%  |  Recall : 56.3%  |  Precision : 56.2%
+  No improvement for 3/15 epochs.
+── Epoch 5/50 ──────────────────────────────
+  Train loss : 1.3655  |  LR: 3.00e-05
+  Val threshold tuning → thr=0.66  macro-F1=56.9%
+  Val step-acc : 27.3%  |  F1 : 56.9%  |  Recall : 56.8%  |  Precision : 57.6%
+  [✓] New best model saved  (step-acc=27.3%,  thr=0.66)
+── Epoch 6/50 ──────────────────────────────
+  Train loss : 1.3355  |  LR: 3.00e-05
+  Val step-acc : 27.3%  |  F1 : 49.7%  |  Recall : 49.8%  |  Precision : 49.8%
+  No improvement for 1/15 epochs.
+── Epoch 7/50 ──────────────────────────────
+  Train loss : 1.2485  |  LR: 2.98e-05
+  Val step-acc : 28.8%  |  F1 : 54.1%  |  Recall : 54.2%  |  Precision : 54.1%
+  [✓] New best model saved  (step-acc=28.8%,  thr=0.66)
+── Epoch 8/50 ──────────────────────────────
+  Train loss : 1.2408  |  LR: 2.97e-05
+  Val step-acc : 28.8%  |  F1 : 53.9%  |  Recall : 53.9%  |  Precision : 54.3%
+  No improvement for 1/15 epochs.
+── Epoch 9/50 ──────────────────────────────
+  Train loss : 1.2358  |  LR: 2.94e-05
+  Val step-acc : 37.9%  |  F1 : 58.1%  |  Recall : 58.0%  |  Precision : 58.3%
+  [✓] New best model saved  (step-acc=37.9%,  thr=0.66)
+── Epoch 10/50 ──────────────────────────────
+  Train loss : 1.0960  |  LR: 2.91e-05
+  Val threshold tuning → thr=0.72  macro-F1=60.2%
+  Val step-acc : 40.9%  |  F1 : 60.2%  |  Recall : 60.1%  |  Precision : 60.5%
+  [✓] New best model saved  (step-acc=40.9%,  thr=0.72)
+── Epoch 11/50 ──────────────────────────────
+  Train loss : 1.1103  |  LR: 2.87e-05
+  Val step-acc : 39.4%  |  F1 : 58.6%  |  Recall : 58.6%  |  Precision : 58.7%
+  No improvement for 1/15 epochs.
+── Epoch 12/50 ──────────────────────────────
+  Train loss : 0.9922  |  LR: 2.82e-05
+  Val step-acc : 31.8%  |  F1 : 56.9%  |  Recall : 57.9%  |  Precision : 57.3%
+  No improvement for 2/15 epochs.
+── Epoch 13/50 ──────────────────────────────
+  Train loss : 1.0952  |  LR: 2.77e-05
+  Val step-acc : 31.8%  |  F1 : 57.7%  |  Recall : 59.7%  |  Precision : 59.0%
+  No improvement for 3/15 epochs.
+── Epoch 14/50 ──────────────────────────────
+  Train loss : 0.9402  |  LR: 2.71e-05
+  Val step-acc : 36.4%  |  F1 : 55.5%  |  Recall : 57.0%  |  Precision : 56.4%
+  No improvement for 4/15 epochs.
+── Epoch 15/50 ──────────────────────────────
+  Train loss : 1.0546  |  LR: 2.64e-05
+  Val threshold tuning → thr=0.64  macro-F1=65.4%
+  Val step-acc : 43.9%  |  F1 : 65.4%  |  Recall : 64.8%  |  Precision : 68.5%
+  [✓] New best model saved  (step-acc=43.9%,  thr=0.64)
+── Epoch 16/50 ──────────────────────────────
+  Train loss : 0.9163  |  LR: 2.57e-05
+  Val step-acc : 36.4%  |  F1 : 53.4%  |  Recall : 53.9%  |  Precision : 53.6%
+  No improvement for 1/15 epochs.
+── Epoch 17/50 ──────────────────────────────
+  Train loss : 0.8299  |  LR: 2.49e-05
+  Val step-acc : 34.8%  |  F1 : 54.1%  |  Recall : 55.1%  |  Precision : 54.7%
+  No improvement for 2/15 epochs.
+── Epoch 18/50 ──────────────────────────────
+  Train loss : 0.9298  |  LR: 2.41e-05
+  Val step-acc : 37.9%  |  F1 : 54.2%  |  Recall : 54.6%  |  Precision : 54.4%
+  No improvement for 3/15 epochs.
+── Epoch 19/50 ──────────────────────────────
+  Train loss : 0.9303  |  LR: 2.33e-05
+  Val step-acc : 37.9%  |  F1 : 55.4%  |  Recall : 56.0%  |  Precision : 55.6%
+  No improvement for 4/15 epochs.
+── Epoch 20/50 ──────────────────────────────
+  Train loss : 0.9024  |  LR: 2.23e-05
+  Val threshold tuning → thr=0.40  macro-F1=61.6%
+  Val step-acc : 48.5%  |  F1 : 61.6%  |  Recall : 61.5%  |  Precision : 66.3%
+  [✓] New best model saved  (step-acc=48.5%,  thr=0.40)
+── Epoch 21/50 ──────────────────────────────
+  Train loss : 0.7784  |  LR: 2.14e-05
+  Val step-acc : 43.9%  |  F1 : 59.4%  |  Recall : 59.3%  |  Precision : 59.6%
+  No improvement for 1/15 epochs.
+── Epoch 22/50 ──────────────────────────────
+  Train loss : 0.8355  |  LR: 2.04e-05
+  Val step-acc : 39.4%  |  F1 : 56.3%  |  Recall : 56.7%  |  Precision : 56.3%
+  No improvement for 2/15 epochs.
+── Epoch 23/50 ──────────────────────────────
+  Train loss : 0.7856  |  LR: 1.94e-05
+  Val step-acc : 43.9%  |  F1 : 55.3%  |  Recall : 55.8%  |  Precision : 57.7%
+  No improvement for 3/15 epochs.
+── Epoch 24/50 ──────────────────────────────
+  Train loss : 0.8075  |  LR: 1.84e-05
+  Val step-acc : 47.0%  |  F1 : 55.9%  |  Recall : 55.9%  |  Precision : 56.1%
+  No improvement for 4/15 epochs.
+── Epoch 25/50 ──────────────────────────────
+  Train loss : 0.8042  |  LR: 1.74e-05
+  Val threshold tuning → thr=0.20  macro-F1=56.6%
+  Val step-acc : 37.9%  |  F1 : 56.6%  |  Recall : 57.3%  |  Precision : 56.8%
+  No improvement for 5/15 epochs.
+── Epoch 26/50 ──────────────────────────────
+  Train loss : 0.9398  |  LR: 1.63e-05
+  Val step-acc : 36.4%  |  F1 : 55.0%  |  Recall : 55.4%  |  Precision : 55.1%
+  No improvement for 6/15 epochs.
+── Epoch 27/50 ──────────────────────────────
+  Train loss : 0.7506  |  LR: 1.53e-05
+  Val step-acc : 37.9%  |  F1 : 51.5%  |  Recall : 51.5%  |  Precision : 51.5%
+  No improvement for 7/15 epochs.
+── Epoch 28/50 ──────────────────────────────
+  Train loss : 0.8052  |  LR: 1.42e-05
+  Val step-acc : 43.9%  |  F1 : 54.6%  |  Recall : 54.8%  |  Precision : 54.6%
+  No improvement for 8/15 epochs.
+── Epoch 29/50 ──────────────────────────────
+  Train loss : 0.6610  |  LR: 1.32e-05
+  Val step-acc : 37.9%  |  F1 : 52.4%  |  Recall : 53.5%  |  Precision : 53.3%
+  No improvement for 9/15 epochs.
+── Epoch 30/50 ──────────────────────────────
+  Train loss : 0.7598  |  LR: 1.21e-05
+  Val threshold tuning → thr=0.68  macro-F1=56.4%
+  Val step-acc : 36.4%  |  F1 : 56.4%  |  Recall : 57.8%  |  Precision : 57.1%
+  No improvement for 10/15 epochs.
+── Epoch 31/50 ──────────────────────────────
+  Train loss : 0.8782  |  LR: 1.11e-05
+  Val step-acc : 42.4%  |  F1 : 51.6%  |  Recall : 51.7%  |  Precision : 51.7%
+  No improvement for 11/15 epochs.
+── Epoch 32/50 ──────────────────────────────
+  Train loss : 0.7015  |  LR: 1.01e-05
+  Val step-acc : 37.9%  |  F1 : 50.6%  |  Recall : 51.0%  |  Precision : 50.9%
+  No improvement for 12/15 epochs.
+── Epoch 33/50 ──────────────────────────────
+  Train loss : 0.7263  |  LR: 9.12e-06
+  Val step-acc : 34.8%  |  F1 : 52.6%  |  Recall : 53.1%  |  Precision : 52.9%
+  No improvement for 13/15 epochs.
+── Epoch 34/50 ──────────────────────────────
+  Train loss : 0.6912  |  LR: 8.16e-06
+  Val step-acc : 39.4%  |  F1 : 49.4%  |  Recall : 49.7%  |  Precision : 49.7%
+  No improvement for 14/15 epochs.
+── Epoch 35/50 ──────────────────────────────
+  Train loss : 0.5177  |  LR: 7.24e-06
+  Val threshold tuning → thr=0.64  macro-F1=49.3%
+  Val step-acc : 30.3%  |  F1 : 49.3%  |  Recall : 51.7%  |  Precision : 51.6%
+  No improvement for 15/15 epochs.
+
+Early stopping at epoch 35.
+
+── Training complete ──────────────────────────────────────────
+Best val step-acc : 48.5%  at threshold 0.40
+Weights saved to  : /home/minato/Documents/Agentic Ai Project/agentsight/src/training/../../src/models/best_agentsight.pth

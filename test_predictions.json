@@ -1,0 +1,1052 @@
+[
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "Math",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 3,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 4,
+        "max_probability": 0.996863842010498,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "Tool Use",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 11,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 4,
+        "max_probability": 0.44577735662460327,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4o-2024-11-20",
+        "domain": "Math",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 1,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 1,
+        "max_probability": 0.9971639513969421,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4o-2024-11-20",
+        "domain": "General Assistant",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 3,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 1,
+        "max_probability": 0.6054310202598572,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-5-2025-08-07",
+        "domain": "Science",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 1,
+        "pred_is_hallucination": false,
+        "pred_hallucination_step": null,
+        "max_probability": 0.3023598790168762,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4o-2024-11-20",
+        "domain": "Science",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 1,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 1,
+        "max_probability": 0.99650639295578,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "Math",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 1,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 1,
+        "max_probability": 0.9970575571060181,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4o-2024-11-20",
+        "domain": "World Knowledge",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 3,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 1,
+        "max_probability": 0.9929266571998596,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "General Assistant",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 5,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 6,
+        "max_probability": 0.4610068202018738,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-5-2025-08-07",
+        "domain": "Science",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 1,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 3,
+        "max_probability": 0.9539906978607178,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "meta-llama_Llama-3.3-70B-Instruct",
+        "domain": "Tool Use",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 6,
+        "pred_is_hallucination": false,
+        "pred_hallucination_step": null,
+        "max_probability": 0.3877990245819092,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4o-2024-11-20",
+        "domain": "World Knowledge",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 2,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 2,
+        "max_probability": 0.9955329895019531,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "Math",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 1,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 1,
+        "max_probability": 0.9965248703956604,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4o-2024-11-20",
+        "domain": "Math",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 4,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 12,
+        "max_probability": 0.9949064254760742,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "Math",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 1,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 1,
+        "max_probability": 0.997238278388977,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "meta-llama_Llama-3.3-70B-Instruct",
+        "domain": "Tool Use",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 4,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 5,
+        "max_probability": 0.8262434005737305,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "Science",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 1,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 1,
+        "max_probability": 0.9977586269378662,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "General Assistant",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 2,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 3,
+        "max_probability": 0.8724601864814758,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4o-2024-11-20",
+        "domain": "Math",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 1,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 1,
+        "max_probability": 0.9954116940498352,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "World Knowledge",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 1,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 1,
+        "max_probability": 0.9935979843139648,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "Tool Use",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 6,
+        "pred_is_hallucination": false,
+        "pred_hallucination_step": null,
+        "max_probability": 0.26969480514526367,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "Qwen2.5-Coder-32B-Instruct",
+        "domain": "World Knowledge",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 2,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 2,
+        "max_probability": 0.9412800669670105,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "Science",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 1,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 1,
+        "max_probability": 0.9933218359947205,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "World Knowledge",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 2,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 2,
+        "max_probability": 0.9969642758369446,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "Qwen2.5-Coder-32B-Instruct",
+        "domain": "Math",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 2,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 4,
+        "max_probability": 0.9622414112091064,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "Tool Use",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 12,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 12,
+        "max_probability": 0.5799850821495056,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "Science",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 3,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 1,
+        "max_probability": 0.99415522813797,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "meta-llama_Llama-3.3-70B-Instruct",
+        "domain": "Tool Use",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 10,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 6,
+        "max_probability": 0.9951180219650269,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "Science",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 4,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 1,
+        "max_probability": 0.998079776763916,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "World Knowledge",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 2,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 2,
+        "max_probability": 0.9850142598152161,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "Math",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 1,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 2,
+        "max_probability": 0.8653396964073181,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4o-2024-11-20",
+        "domain": "Science",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 2,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 2,
+        "max_probability": 0.9973920583724976,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "Qwen2.5-Coder-32B-Instruct",
+        "domain": "Science",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 5,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 1,
+        "max_probability": 0.6087979078292847,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "Science",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 2,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 2,
+        "max_probability": 0.9925037622451782,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "meta-llama_Llama-3.3-70B-Instruct",
+        "domain": "Tool Use",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 2,
+        "pred_is_hallucination": false,
+        "pred_hallucination_step": null,
+        "max_probability": 0.2398737072944641,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4o-2024-11-20",
+        "domain": "Math",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 3,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 2,
+        "max_probability": 0.7025302648544312,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4o-2024-11-20",
+        "domain": "Math",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 5,
+        "pred_is_hallucination": false,
+        "pred_hallucination_step": null,
+        "max_probability": 0.33146438002586365,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "World Knowledge",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 4,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 3,
+        "max_probability": 0.9881622195243835,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "meta-llama_Llama-3.3-70B-Instruct",
+        "domain": "Tool Use",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 7,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 4,
+        "max_probability": 0.991540253162384,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "Tool Use",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 5,
+        "pred_is_hallucination": false,
+        "pred_hallucination_step": null,
+        "max_probability": 0.3251582086086273,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4o-2024-11-20",
+        "domain": "World Knowledge",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 3,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 4,
+        "max_probability": 0.9965015649795532,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-5-2025-08-07",
+        "domain": "World Knowledge",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 17,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 17,
+        "max_probability": 0.996801495552063,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "Tool Use",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 3,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 7,
+        "max_probability": 0.9925960898399353,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "World Knowledge",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 6,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 6,
+        "max_probability": 0.9939369559288025,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "meta-llama_Llama-3.3-70B-Instruct",
+        "domain": "Tool Use",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 8,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 8,
+        "max_probability": 0.9861191511154175,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "claude-3-7-sonnet-20250219",
+        "domain": "World Knowledge",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 3,
+        "pred_is_hallucination": false,
+        "pred_hallucination_step": null,
+        "max_probability": 0.283141553401947,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "Science",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 3,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 3,
+        "max_probability": 0.9969909191131592,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "Science",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 3,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 3,
+        "max_probability": 0.9724031686782837,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4o-2024-11-20",
+        "domain": "Math",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 4,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 4,
+        "max_probability": 0.9978740215301514,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-5-2025-08-07",
+        "domain": "Math",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 1,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 1,
+        "max_probability": 0.9971207976341248,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "General Assistant",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 3,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 2,
+        "max_probability": 0.8368617296218872,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "meta-llama_Llama-3.3-70B-Instruct",
+        "domain": "Tool Use",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 7,
+        "pred_is_hallucination": false,
+        "pred_hallucination_step": null,
+        "max_probability": 0.3021683990955353,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "Qwen2.5-Coder-32B-Instruct",
+        "domain": "Math",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 1,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 3,
+        "max_probability": 0.661101758480072,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "Tool Use",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 1,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 1,
+        "max_probability": 0.9786064624786377,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "Qwen2.5-Coder-32B-Instruct",
+        "domain": "Math",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 2,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 2,
+        "max_probability": 0.5234233736991882,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "Math",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 3,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 2,
+        "max_probability": 0.6501842737197876,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "Tool Use",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 3,
+        "pred_is_hallucination": false,
+        "pred_hallucination_step": null,
+        "max_probability": 0.2660540044307709,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "Science",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 3,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 3,
+        "max_probability": 0.9970424771308899,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-5-2025-08-07",
+        "domain": "Science",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 3,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 3,
+        "max_probability": 0.9945850968360901,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "Qwen_Qwen3-32B",
+        "domain": "Tool Use",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 7,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 7,
+        "max_probability": 0.45933082699775696,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "Qwen_Qwen3-32B",
+        "domain": "Tool Use",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 5,
+        "pred_is_hallucination": false,
+        "pred_hallucination_step": null,
+        "max_probability": 0.2857682406902313,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "General Assistant",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 1,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 10,
+        "max_probability": 0.9919312596321106,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4o-2024-11-20",
+        "domain": "World Knowledge",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 5,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 5,
+        "max_probability": 0.9962105751037598,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "World Knowledge",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 3,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 3,
+        "max_probability": 0.9962877035140991,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "meta-llama_Llama-3.3-70B-Instruct",
+        "domain": "Tool Use",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 1,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 6,
+        "max_probability": 0.747563898563385,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "Science",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 1,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 1,
+        "max_probability": 0.9005918502807617,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "Science",
+        "true_is_hallucination": true,
+        "true_hallucination_step": 7,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 7,
+        "max_probability": 0.9963350296020508,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "Qwen_Qwen3-32B",
+        "domain": "Tool Use",
+        "true_is_hallucination": false,
+        "true_hallucination_step": null,
+        "pred_is_hallucination": false,
+        "pred_hallucination_step": null,
+        "max_probability": 0.3418513238430023,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "World Knowledge",
+        "true_is_hallucination": false,
+        "true_hallucination_step": null,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 3,
+        "max_probability": 0.9923787117004395,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "Qwen_Qwen3-32B",
+        "domain": "Tool Use",
+        "true_is_hallucination": false,
+        "true_hallucination_step": null,
+        "pred_is_hallucination": false,
+        "pred_hallucination_step": null,
+        "max_probability": 0.21569664776325226,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4o-2024-11-20",
+        "domain": "World Knowledge",
+        "true_is_hallucination": false,
+        "true_hallucination_step": null,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 2,
+        "max_probability": 0.5211017727851868,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "Qwen2.5-Coder-32B-Instruct",
+        "domain": "World Knowledge",
+        "true_is_hallucination": false,
+        "true_hallucination_step": null,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 5,
+        "max_probability": 0.9809589982032776,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "Science",
+        "true_is_hallucination": false,
+        "true_hallucination_step": null,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 3,
+        "max_probability": 0.9980127811431885,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "World Knowledge",
+        "true_is_hallucination": false,
+        "true_hallucination_step": null,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 3,
+        "max_probability": 0.9963319897651672,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "World Knowledge",
+        "true_is_hallucination": false,
+        "true_hallucination_step": null,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 1,
+        "max_probability": 0.9674341678619385,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "Tool Use",
+        "true_is_hallucination": false,
+        "true_hallucination_step": null,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 8,
+        "max_probability": 0.5682547092437744,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "claude-3-7-sonnet-20250219",
+        "domain": "World Knowledge",
+        "true_is_hallucination": false,
+        "true_hallucination_step": null,
+        "pred_is_hallucination": false,
+        "pred_hallucination_step": null,
+        "max_probability": 0.3277720808982849,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4o-2024-11-20",
+        "domain": "Science",
+        "true_is_hallucination": false,
+        "true_hallucination_step": null,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 4,
+        "max_probability": 0.9475616812705994,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-5-2025-08-07",
+        "domain": "Math",
+        "true_is_hallucination": false,
+        "true_hallucination_step": null,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 4,
+        "max_probability": 0.989609956741333,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4o-2024-11-20",
+        "domain": "World Knowledge",
+        "true_is_hallucination": false,
+        "true_hallucination_step": null,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 2,
+        "max_probability": 0.8812039494514465,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "Math",
+        "true_is_hallucination": false,
+        "true_hallucination_step": null,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 5,
+        "max_probability": 0.9915905594825745,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "Qwen2.5-Coder-32B-Instruct",
+        "domain": "Math",
+        "true_is_hallucination": false,
+        "true_hallucination_step": null,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 3,
+        "max_probability": 0.9839004278182983,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "claude-3-7-sonnet-20250219",
+        "domain": "General Assistant",
+        "true_is_hallucination": false,
+        "true_hallucination_step": null,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 2,
+        "max_probability": 0.9630318284034729,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "Qwen_Qwen3-32B",
+        "domain": "Tool Use",
+        "true_is_hallucination": false,
+        "true_hallucination_step": null,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 6,
+        "max_probability": 0.9913936257362366,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-5-2025-08-07",
+        "domain": "Math",
+        "true_is_hallucination": false,
+        "true_hallucination_step": null,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 4,
+        "max_probability": 0.9960170388221741,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "Qwen_Qwen3-32B",
+        "domain": "Tool Use",
+        "true_is_hallucination": false,
+        "true_hallucination_step": null,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 10,
+        "max_probability": 0.995072066783905,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "Science",
+        "true_is_hallucination": false,
+        "true_hallucination_step": null,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 11,
+        "max_probability": 0.9969682097434998,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "Science",
+        "true_is_hallucination": false,
+        "true_hallucination_step": null,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 7,
+        "max_probability": 0.9970762729644775,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "claude-3-7-sonnet-20250219",
+        "domain": "World Knowledge",
+        "true_is_hallucination": false,
+        "true_hallucination_step": null,
+        "pred_is_hallucination": false,
+        "pred_hallucination_step": null,
+        "max_probability": 0.2446843683719635,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-5-2025-08-07",
+        "domain": "Science",
+        "true_is_hallucination": false,
+        "true_hallucination_step": null,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 1,
+        "max_probability": 0.8794485926628113,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4o-2024-11-20",
+        "domain": "World Knowledge",
+        "true_is_hallucination": false,
+        "true_hallucination_step": null,
+        "pred_is_hallucination": false,
+        "pred_hallucination_step": null,
+        "max_probability": 0.23113037645816803,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "claude-3-7-sonnet-20250219",
+        "domain": "Science",
+        "true_is_hallucination": false,
+        "true_hallucination_step": null,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 1,
+        "max_probability": 0.8752509951591492,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "World Knowledge",
+        "true_is_hallucination": false,
+        "true_hallucination_step": null,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 3,
+        "max_probability": 0.9957367181777954,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "Qwen_Qwen3-32B",
+        "domain": "Tool Use",
+        "true_is_hallucination": false,
+        "true_hallucination_step": null,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 5,
+        "max_probability": 0.4605560302734375,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "Qwen2.5-Coder-32B-Instruct",
+        "domain": "World Knowledge",
+        "true_is_hallucination": false,
+        "true_hallucination_step": null,
+        "pred_is_hallucination": false,
+        "pred_hallucination_step": null,
+        "max_probability": 0.24101322889328003,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "Tool Use",
+        "true_is_hallucination": false,
+        "true_hallucination_step": null,
+        "pred_is_hallucination": false,
+        "pred_hallucination_step": null,
+        "max_probability": 0.22924748063087463,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4o-2024-11-20",
+        "domain": "Math",
+        "true_is_hallucination": false,
+        "true_hallucination_step": null,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 2,
+        "max_probability": 0.9852501749992371,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "World Knowledge",
+        "true_is_hallucination": false,
+        "true_hallucination_step": null,
+        "pred_is_hallucination": false,
+        "pred_hallucination_step": null,
+        "max_probability": 0.2931600511074066,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "claude-3-7-sonnet-20250219",
+        "domain": "General Assistant",
+        "true_is_hallucination": false,
+        "true_hallucination_step": null,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 9,
+        "max_probability": 0.9793969392776489,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "Tool Use",
+        "true_is_hallucination": false,
+        "true_hallucination_step": null,
+        "pred_is_hallucination": false,
+        "pred_hallucination_step": null,
+        "max_probability": 0.30579525232315063,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4o-2024-11-20",
+        "domain": "Math",
+        "true_is_hallucination": false,
+        "true_hallucination_step": null,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 2,
+        "max_probability": 0.9972416162490845,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-5-2025-08-07",
+        "domain": "Science",
+        "true_is_hallucination": false,
+        "true_hallucination_step": null,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 1,
+        "max_probability": 0.9927642941474915,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "Tool Use",
+        "true_is_hallucination": false,
+        "true_hallucination_step": null,
+        "pred_is_hallucination": false,
+        "pred_hallucination_step": null,
+        "max_probability": 0.23114104568958282,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-5-2025-08-07",
+        "domain": "Science",
+        "true_is_hallucination": false,
+        "true_hallucination_step": null,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 4,
+        "max_probability": 0.9979289770126343,
+        "encoding_failed": false
+    },
+    {
+        "trajectory_id": "gpt-4.1-2025-04-14",
+        "domain": "Tool Use",
+        "true_is_hallucination": false,
+        "true_hallucination_step": null,
+        "pred_is_hallucination": true,
+        "pred_hallucination_step": 9,
+        "max_probability": 0.9950580596923828,
+        "encoding_failed": false
+    }
+]

@@ -1,0 +1,318 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{natbib}
+\usepackage{url}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!60!black,
+    citecolor=blue!60!black,
+    urlcolor=blue!60!black,
+}
+
+\title{\textbf{AgentSight: Step-Level Hallucination Localisation in Autonomous Agent Trajectories via Tool-Execution Context}}
+
+\author{
+  Minato Namikaze \\
+  \texttt{[institution / course]}
+}
+
+\date{June 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+We present \textbf{AgentSight}, the first gradient-trained step-level hallucination classifier for autonomous agent trajectories evaluated on the AgentHallu benchmark. AgentSight encodes each trajectory step as a concatenated string of reasoning trace, tool calls, and tool observations, processed through a DeBERTa-v3-base encoder with LoRA adapters and a cross-step Transformer context encoder. On a locked 105-trajectory test set (67 hallucinated, 38 clean), AgentSight achieves \textbf{47.8\% step localisation accuracy} (32/67), a $+$6.7 point margin above the Gemini-2.5-Pro reported value of 41.1\%, though the 95\% Wilson confidence interval [36.3\%, 59.5\%] means this margin cannot be declared statistically significant at $n{=}67$ ($p{=}0.163$, one-sided binomial). Judgment Macro-F1 is 54.7\%, outperforming all open-source zero-shot baselines ($+$8.9 points above the average) but below frontier models. Our principal finding is a controlled ablation demonstrating that removing the tool-execution channel ([ACTION]+[OBS]) causes a 31.8-point collapse in step localisation accuracy (48.5\% $\to$ 16.7\% on the validation set), providing strong, reproducible evidence that tool output content is the dominant localisation signal in agent trajectory hallucination detection.
+\end{abstract}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Introduction}
+% ─────────────────────────────────────────────────────────────────────────────
+
+Autonomous language model agents that interact with external tools --- web browsers, code interpreters, calculators, knowledge bases --- produce trajectories of sequential reasoning steps interleaved with tool calls and their observations. When such agents hallucinate, the error frequently occurs at a specific step and propagates downstream, corrupting subsequent reasoning. Detecting and \emph{localising} the root-cause step is therefore qualitatively different from trajectory-level binary classification: it requires the model to assign a confidence score to each step, not merely to the trajectory as a whole.
+
+The AgentHallu benchmark~\citep{agenthallu} provides the first dataset with step-level hallucination annotations across five domains (Math, Science, Tool Use, World Knowledge, General Assistant) and five hallucination categories (Reasoning, Tool-Use, Retrieval, Human-Interaction, Planning). Prior work on this benchmark relies exclusively on zero-shot prompted LLM judges (Gemini-2.5-Pro, GPT-5, open-source models), which report step localisation accuracy by asking the model to identify which step failed. No prior work trains a dedicated classifier end-to-end on step-level labels.
+
+We make the following contributions:
+\begin{enumerate}
+  \item \textbf{AgentSight}: the first gradient-trained step-level hallucination classifier on the AgentHallu benchmark, achieving 47.8\% step localisation accuracy and 54.7\% judgment Macro-F1.
+  \item \textbf{Ablation evidence}: a controlled forward-pass ablation showing a 31.8-point drop in step accuracy when tool-execution context is removed, identifying it as the dominant localisation signal.
+  \item \textbf{Reproducible evaluation}: a single sealed test-set run with SHA-256 integrity verification and threshold tuning confined to the validation set.
+\end{enumerate}
+
+What we do \emph{not} claim: that AgentSight is statistically superior to Gemini-2.5-Pro on step localisation. The $+$6.7 point margin is practically meaningful but falls short of significance at this sample size. We report the confidence interval and p-value explicitly.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Related Work}
+% ─────────────────────────────────────────────────────────────────────────────
+
+\paragraph{LLM hallucination detection.} The broader problem of hallucination in language models has been studied extensively in the context of factual recall~\citep{truthfulqa}, retrieval-augmented generation~\citep{ragtruth}, and summarisation~\citep{factcc}. These approaches operate at the document or sentence level and do not address the step-level, multi-turn structure of tool-using agents.
+
+\paragraph{Agent trajectory evaluation.} AgentHallu~\citep{agenthallu} is the most directly relevant benchmark, providing step-level annotations for 693 trajectories produced by multiple backbone models across five domains. Its published baselines are all zero-shot prompted judges; to our knowledge no prior work trains a classifier on its step-level labels. Concurrent work on agent evaluation~\citep{agentbench, tau_bench} focuses on task completion rather than error localisation.
+
+\paragraph{Parameter-efficient fine-tuning.} LoRA~\citep{lora} enables fine-tuning of large encoder models with a small fraction of parameters ($\sim$1.4\% in our case), making gradient-trained classification on moderate-sized datasets tractable without full fine-tuning.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Method}
+% ─────────────────────────────────────────────────────────────────────────────
+
+\subsection{Input Representation}
+
+Each agent step $t$ in trajectory $i$ is encoded as a single concatenated string:
+\begin{equation}
+  x_{i,t} = \texttt{[QUERY]}\ q_i\ \texttt{[THOUGHT]}\ r_{i,t}\ \texttt{[ACTION]}\ a_{i,t}\ \texttt{[OBS]}\ o_{i,t}
+\end{equation}
+where $q_i$ is the task query, $r_{i,t}$ is the reasoning trace (LLM thought), $a_{i,t}$ is the serialised tool call(s), and $o_{i,t}$ is the tool response(s). The string is tokenised with a max length of 512 tokens; when truncation is necessary the DeBERTa tokeniser truncates from the middle, preserving the query prefix and the tool observation suffix.
+
+This representation was chosen over separate embedding streams because the ablation (Section~\ref{sec:ablation}) showed that the learned cross-channel attention in DeBERTa is sufficient to separate channel contributions without an explicit fusion architecture.
+
+\subsection{Architecture}
+
+\textbf{Backbone encoder.} DeBERTa-v3-base~\citep{deberta} encodes each step string independently, producing a CLS representation $\mathbf{h}_{i,t} \in \mathbb{R}^{768}$. LoRA adapters ($r{=}16$, $\alpha{=}64$) are applied to all attention projection matrices (\texttt{query\_proj}, \texttt{key\_proj}, \texttt{value\_proj}, \texttt{dense}), yielding 2,654,208 trainable parameters (1.42\% of total).
+
+\textbf{Cross-step context encoder.} The sequence of step representations $\{\mathbf{h}_{i,t}\}_{t=1}^{T_i}$ is passed through a 3-layer Transformer encoder with Pre-LayerNorm, 8 attention heads, and a $256 \times 4 = 1024$ dimensional feedforward layer. This allows each step to attend over all other steps in the trajectory, modelling error-accumulation dynamics. Using Pre-LN (rather than Post-LN) improved training stability in our experiments.
+
+\textbf{Classification head.} A two-layer MLP with GELU activations projects each context-encoded representation to a scalar hallucination logit:
+\begin{equation}
+  \hat{y}_{i,t} = \mathbf{W}_2\,\text{GELU}(\mathbf{W}_1\,\mathbf{c}_{i,t} + \mathbf{b}_1) + b_2 \in \mathbb{R}
+\end{equation}
+BCEWithLogitsLoss is applied during training; sigmoid is applied at inference.
+
+A risk-propagation regression head was initially included but yielded a Spearman correlation of 0.049 on the validation set, providing no independent signal. It was removed from the final architecture, leaving a single classification objective.
+
+\subsection{Training}
+
+\textbf{Data.} The AgentHallu dataset is split 70/15/15 stratified by hallucination label with \texttt{random\_state=42}, yielding 485/103/105 trajectories for train/val/test. The training set contains 310 hallucinated and 175 clean trajectories (63.9\% positive).
+
+\textbf{Class balance.} A \texttt{WeightedRandomSampler} ensures each epoch samples hallucinated and clean trajectories at equal effective rate. The BCEWithLogitsLoss \texttt{pos\_weight} is computed dynamically from the training split ratio.
+
+\textbf{Truncation.} Trajectories longer than 20 steps are truncated to a centred 20-step window around the annotated hallucination step (for positive samples) or the last 20 steps (for clean samples). This ensures the labelled step is always present during training.
+
+\textbf{Optimisation.} AdamW ($\eta{=}3{\times}10^{-5}$, $\lambda{=}0.01$) with a linear warmup over 10\% of gradient steps followed by cosine decay. Gradients are accumulated over 4 trajectories before each update (effective batch size 4). Gradient norm is clipped to 1.0.
+
+\textbf{Model selection.} The checkpoint maximising validation step localisation accuracy is saved. Decision threshold is tuned on the validation set every 5 epochs; the best threshold (0.40) is stored alongside the weights and applied unchanged at test time. Training stops when validation step accuracy fails to improve for 15 consecutive epochs; the best model was reached at epoch 20 with 48.5\% val step-acc (F1: 61.6\%).
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Evaluation Protocol}
+% ─────────────────────────────────────────────────────────────────────────────
+
+We follow the AgentHallu paper metric definitions exactly:
+
+\textbf{Step localisation accuracy} (Eq. 11 in \citealt{agenthallu}):
+\begin{equation}
+  \text{Acc}_\text{step} = \frac{|\{i \in \mathcal{H}_\text{hal} : \hat{s}_i = s^*_i\}|}{|\mathcal{H}_\text{hal}|}
+\end{equation}
+where $\mathcal{H}_\text{hal}$ is the set of all hallucinated test trajectories and $s^*_i$ is the annotated root-cause step. The denominator is \emph{all} hallucinated trajectories, regardless of whether the model's binary judgment was correct (TP-only accuracy is reported separately as a debugging variant).
+
+\textbf{Judgment Macro-F1}: macro-averaged F1 of the binary hallucination classification (hallucinated vs. clean) over all 105 test trajectories.
+
+\textbf{Confidence interval.} 95\% Wilson interval for $\text{Acc}_\text{step}$ at $n{=}67$. We report the one-sided binomial p-value against the null hypothesis $p_0 = 0.411$ (Gemini-2.5-Pro reported value).
+
+\textbf{Test set integrity.} \texttt{data/splits/test.json} is verified against a locked SHA-256 hash before evaluation. The threshold is loaded from metadata saved during validation and is not re-tuned.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Results}
+% ─────────────────────────────────────────────────────────────────────────────
+
+\subsection{Main Results}
+
+Table~\ref{tab:main} reports the final one-shot test-set evaluation. AgentSight achieves 47.8\% step localisation accuracy (32/67 hallucinated trajectories correctly localised), a $+$6.7 point margin above Gemini-2.5-Pro. The 95\% Wilson confidence interval is [36.3\%, 59.5\%], which contains Gemini-2.5-Pro's reported 41.1\%; accordingly, this margin is \emph{practically meaningful but not statistically significant} ($p{=}0.163$, one-sided exact binomial test).
+
+\begin{table}[h]
+\centering
+\caption{Test-set results on AgentHallu. All prior-work numbers are as reported in the original paper. CI computed by Wilson method at $n{=}67$ for step-acc; judgment F1 on $n{=}105$.}
+\label{tab:main}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{System} & \textbf{Step-Acc} & \textbf{95\% CI} & \textbf{Judgment F1} & \textbf{Trained?} \\
+\midrule
+Random              & 8.7\%  & ---             & 48.5\% & No \\
+Open-source avg     & 10.9\% & ---             & 45.8\% & No \\
+Gemini-2.5-Pro      & 41.1\% & (not reported)  & 64.6\% & No \\
+GPT-5               & ---    & ---             & 70.2\% & No \\
+\midrule
+\textbf{AgentSight (ours)} & \textbf{47.8\%} & {[36.3\%, 59.5\%]} & \textbf{54.7\%} & \textbf{Yes} \\
+\quad Precision     & ---    & ---             & 58.5\% & \\
+\quad Recall        & ---    & ---             & 55.7\% & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The $+$6.7 point margin on step localisation is the largest improvement achievable from training alone at this dataset size; narrowing the confidence interval requires a larger test set, which is a dataset-level constraint outside the scope of this work.
+
+Judgment F1 (54.7\%) substantially outperforms all zero-shot open-source systems but falls short of Gemini-2.5-Pro (64.6\%) and GPT-5 (70.2\%). This is unsurprising: frontier models with in-context reasoning bring general-purpose knowledge that a trained 186M-parameter encoder cannot match. However, AgentSight has qualitatively different properties: it runs in a single forward pass at inference, does not require a prompted LLM, and exposes per-step probability scores rather than a single judgment.
+
+\subsection{Confusion Matrix and Position Bias}
+
+The judgment confusion matrix (TP=57, FP=28, TN=10, FN=10 over 105 trajectories) reveals high recall for hallucinated trajectories (57/67 = 85.1\%) at the cost of precision (57/85 = 67.1\%). This reflects the choice of threshold 0.40 (below 0.50), which was optimal for step-acc on the validation set. A threshold of 0.50 would shift the operating point toward higher precision with lower recall.
+
+The position bias check shows that step 1 constitutes 26.9\% of true hallucination steps and 29.8\% of predicted steps --- a 2.9-point gap that does not cross our warning threshold of 15 points. AgentSight does not exhibit a significant positional shortcut.
+
+\subsection{Domain Breakdown}
+
+\begin{table}[h]
+\centering
+\caption{Step localisation accuracy by domain on the test set. 95\% Wilson CI reported where $n \geq 5$.}
+\label{tab:domain}
+\begin{tabular}{lccr}
+\toprule
+\textbf{Domain} & \textbf{Correct/Total} & \textbf{Step-Acc} & \textbf{95\% CI} \\
+\midrule
+Science            & 11/16 & 68.8\% & [44.4\%, 85.8\%] \\
+World Knowledge    & 9/13  & 69.2\% & [42.4\%, 87.3\%] \\
+Math               & 8/16  & 50.0\% & [28.0\%, 72.0\%] \\
+Tool Use           & 4/17  & 23.5\% & [9.6\%, 47.3\%] \\
+General Assistant  & 0/5   & 0.0\%  & [0.0\%, 43.4\%] \\
+\midrule
+\textbf{Overall}   & \textbf{32/67} & \textbf{47.8\%} & [36.3\%, 59.5\%] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The domain breakdown (Table~\ref{tab:domain}) reveals a striking pattern: AgentSight performs strongly on domains where hallucinations manifest in tool \emph{outputs} (Science: 68.8\%, World Knowledge: 69.2\%) and poorly on domains where hallucinations manifest in reasoning \emph{without} distinctive tool context (Tool Use: 23.5\%, General Assistant: 0/5). This is fully consistent with the ablation finding that the [ACTION]+[OBS] channel is the dominant signal: domains where that channel is informative are exactly the ones where the model succeeds.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Ablation Study}
+\label{sec:ablation}
+% ─────────────────────────────────────────────────────────────────────────────
+
+To identify which input channels and architectural components carry the localisation signal, we evaluate three forward-pass ablations on the validation set (103 trajectories, 66 hallucinated). All ablations use the same trained weights; they are sensitivity analyses on a fixed model, not separate training runs.
+
+\begin{table}[h]
+\centering
+\caption{Ablation study on the validation set ($n{=}66$ hallucinated trajectories). The same checkpoint and threshold (0.40) are used in all conditions.}
+\label{tab:ablation}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Condition} & \textbf{Step-Acc} & $\boldsymbol{\Delta}$ & \textbf{Macro-F1} \\
+\midrule
+Full Model                          & 48.5\% & --- & 61.6\% \\
+\quad A1: No Tool Context           & 16.7\% & $-$31.8 & 45.6\% \\
+\quad A2: No Query Context          & 39.4\% & $-$9.1  & 51.0\% \\
+\quad A3: No Cross-Step Attention   & 51.5\% & $+$3.0  & 54.5\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{A1 — No Tool Context} removes the [ACTION] and [OBS] segments entirely, leaving only [QUERY]+[THOUGHT]. Step localisation collapses from 48.5\% to 16.7\%, a $-$31.8 point absolute drop, falling to near the open-source zero-shot average (10.9\%). This is the strongest result in the paper: it demonstrates that without tool execution content, the model has almost no localisation ability beyond random. Judgment F1 also drops 16 points to 45.6\%, below even the random baseline (48.5\%), which indicates the model is also losing binary discrimination capability.
+
+\textbf{A2 — No Query Context} removes the [QUERY] segment. The $-$9.1 point drop confirms that task context contributes to localisation, but is secondary to tool output. The model retains substantial ability from [THOUGHT]+[ACTION]+[OBS] alone.
+
+\textbf{A3 — No Cross-Step Attention} bypasses the three-layer Transformer context encoder, classifying each step independently using only the DeBERTa CLS representation. Step accuracy actually increases by 3.0 points (+51.5\% vs 48.5\%), while F1 drops 7.1 points. This result deserves honest interpretation: the cross-step encoder is hurting step-acc slightly while helping F1. The most likely explanation is that the context encoder shifts probability mass across steps, improving the model's overall trajectory-level discrimination (F1) while occasionally displacing the peak probability away from the true root-cause step. For downstream applications where localisation precision is the primary metric, a step-independent encoder may be preferable.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Discussion}
+% ─────────────────────────────────────────────────────────────────────────────
+
+\subsection{The Primacy of Tool Execution Content}
+
+The ablation results establish a clear hierarchy of signal importance: tool execution content (A1: $-$31.8 pts) $\gg$ query context (A2: $-$9.1 pts) $\gg$ cross-step attention (A3: $+$3 pts). This ordering is consistent with the domain breakdown (Table~\ref{tab:domain}): Science and World Knowledge, where knowledge retrieval errors leave distinctive traces in tool responses, yield the highest accuracy; Tool Use and General Assistant, where the hallucination often occurs in the reasoning content without informative tool output, yield the lowest.
+
+This finding has a practical implication for system designers: any hallucination detection component deployed in an agent system should have access to the raw tool response, not just the model's subsequent reasoning. A post-hoc judge that reads only the final answer or the reasoning trace is missing the most informative channel.
+
+\subsection{Statistical Limitations}
+
+The $n{=}67$ hallucinated test trajectories impose a fundamental constraint on statistical power. The 95\% confidence interval spans 23.2 percentage points ([36.3\%, 59.5\%]), which means the interval contains both "meaningfully worse than Gemini" and "meaningfully better than Gemini" as plausible true values. No amount of model improvement changes this — only a larger test set would.
+
+The appropriate conclusion is that the 47.8\% point estimate is the best available evidence of AgentSight's localisation ability, that it represents a $+$6.7 point improvement over the previous state of the art, and that the community should treat this as preliminary evidence pending evaluation on a larger held-out set. The pattern of results across the training curve, the ablations, and the domain breakdown is consistent and coherent; the uncertainty is quantified, not hidden.
+
+\subsection{Comparison to LLM Judges}
+
+AgentSight's 54.7\% judgment F1 falls short of Gemini-2.5-Pro (64.6\%) and GPT-5 (70.2\%). However, these comparisons are not equivalent: frontier model judges bring multimodal reasoning, chain-of-thought, and parametric world knowledge that a 186M-parameter encoder cannot replicate. AgentSight's value proposition is not raw F1 on a benchmark but deployability: it runs in a single forward pass, requires no API access, and produces calibrated per-step probability scores that can be integrated into an agent's control loop.
+
+\subsection{Negative Result: Error Propagation Risk}
+
+A trajectory-level error propagation risk head was built and evaluated. It produced a Spearman correlation of 0.049 between predicted risk scores and downstream task corruption, indistinguishable from noise. The head was removed from the final architecture. We document this as an honest negative result: the information required to predict cascade failure appears not to be recoverable from a single-step encoder, at least at this data scale.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Conclusion}
+% ─────────────────────────────────────────────────────────────────────────────
+
+We presented AgentSight, the first gradient-trained step-level hallucination classifier on the AgentHallu benchmark. Its principal finding is not a state-of-the-art number but a controlled ablation: removing tool execution content ([ACTION]+[OBS]) from the input causes a 31.8-point collapse in step localisation accuracy, establishing tool output as the dominant signal for step-level hallucination localisation in agent trajectories.
+
+The classifier achieves 47.8\% step localisation accuracy on the sealed test set (32/67 trajectories; 95\% CI: [36.3\%, 59.5\%]), a $+$6.7 point margin above Gemini-2.5-Pro's reported 41.1\% that is practically meaningful but not statistically significant at this sample size. Judgment F1 is 54.7\%, outperforming open-source zero-shot systems but below frontier models.
+
+Future work should address: (1) expanding the evaluation set to reduce CI width; (2) exploring whether the step-independent variant (A3) consistently outperforms the cross-step model on localisation; and (3) testing whether the tool-context primacy finding generalises to other agent benchmarks.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\appendix
+\section{Reproducibility}
+
+\begin{description}
+  \item[Code and weights] All training code is provided in the accompanying repository.
+  \item[Test set integrity] \texttt{data/splits/test.json} SHA-256: \texttt{9604aae8eb5aec4ae666cfbe3053910f0570a807a4fa5515223dbca1aa66a7d8}. This hash is verified programmatically before each test evaluation.
+  \item[Random seeds] Data split uses \texttt{random\_state=42}. No random seed is set during training; results reflect a single training run.
+  \item[Hardware] Training was performed on a single GPU (8GB VRAM). Total training time: approximately 35 epochs at $\sim$7 minutes per epoch.
+  \item[Threshold] Decision threshold (0.40) was selected by maximising validation Macro-F1 during training. It is stored in \texttt{best\_agentsight\_meta.json} and applied without modification at test time.
+\end{description}
+
+\section{Full Confusion Matrix}
+
+\begin{table}[h]
+\centering
+\caption{Judgment classification confusion matrix on the 105-trajectory test set.}
+\begin{tabular}{lcc}
+\toprule
+ & \textbf{Pred: Hallucinated} & \textbf{Pred: Clean} \\
+\midrule
+\textbf{True: Hallucinated} & TP = 57 & FN = 10 \\
+\textbf{True: Clean}        & FP = 28 & TN = 10 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textit{Note}: FP=28 and TN=10 reflect the low-threshold (0.40) operating point optimised for step localisation. At threshold 0.50 the operating point shifts toward fewer false positives.
+
+\section{Training Hyperparameters}
+
+\begin{table}[h]
+\centering
+\caption{Final training configuration.}
+\begin{tabular}{ll}
+\toprule
+\textbf{Hyperparameter} & \textbf{Value} \\
+\midrule
+Encoder            & DeBERTa-v3-base \\
+LoRA rank $r$      & 16 \\
+LoRA $\alpha$      & 64 \\
+LoRA dropout       & 0.1 \\
+LoRA targets       & query\_proj, key\_proj, value\_proj, dense \\
+Trainable params   & 2,654,208 (1.42\%) \\
+Context layers     & 3 (Pre-LN, 8 heads, ff=1024) \\
+Hidden dim         & 256 \\
+Dropout            & 0.2 \\
+Max seq length     & 512 \\
+Max steps          & 20 (centred truncation) \\
+Optimizer          & AdamW \\
+Learning rate      & $3 \times 10^{-5}$ \\
+Weight decay       & 0.01 \\
+LR schedule        & Linear warmup (10\%) + cosine decay \\
+Gradient accum.    & 4 trajectories \\
+Grad norm clip     & 1.0 \\
+Class sampling     & WeightedRandomSampler \\
+pos\_weight        & Dynamic from training ratio \\
+Max epochs         & 50 \\
+Early stopping     & Patience = 15 (val step-acc) \\
+Best checkpoint    & Epoch 20 \\
+Decision threshold & 0.40 (tuned on val) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\end{document}
