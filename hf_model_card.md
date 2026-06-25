@@ -94,7 +94,7 @@ print(result["step_probabilities"])             # [0.12, 0.08, 0.91, 0.04]
 ## Training
 
 ```bash
-git clone https://github.com/YOUR_GH_USERNAME/agentsight
+git clone https://github.com/Minato-sudo/agentsight
 cd agentsight
 pip install -r requirements.txt
 ./run_full_pipeline.sh   # verify → train → ablate → test (one-shot)
@@ -107,7 +107,7 @@ pip install -r requirements.txt
   title={AgentSight: Step-Level Hallucination Localisation in Autonomous Agent Trajectories via Tool-Execution Context},
   author={Namikaze, Minato},
   year={2026},
-  note={Paper + code: https://github.com/YOUR_GH_USERNAME/agentsight}
+  note={Paper + code: https://github.com/Minato-sudo/agentsight}
 }
 ```
 
