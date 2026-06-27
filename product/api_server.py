@@ -124,6 +124,11 @@ class AnalyzeResponse(BaseModel):
 
 # ── Endpoints ─────────────────────────────────────────────────────────────────
 
+@app.get("/", tags=["System"])
+def root():
+    """Root endpoint for HF Spaces preview."""
+    return {"status": "AgentSight API is running successfully!"}
+
 @app.get("/health", tags=["System"])
 def health():
     """Liveness probe. Returns 200 when the model is loaded and ready."""
