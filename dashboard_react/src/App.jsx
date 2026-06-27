@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const API_BASE = 'https://talha1234567-agentsight-api.hf.space';
+const API_BASE = 'http://localhost:8000';
 
 const SAMPLE = {
   query: "Move 'final_report.pdf' to the temp directory",
@@ -41,21 +41,21 @@ function probClass(p) {
 
 export default function App() {
   const [jsonInput, setJsonInput] = useState(JSON.stringify(SAMPLE, null, 2));
-  const [loading, setLoading]     = useState(false);
-  const [result, setResult]       = useState(null);
-  const [error, setError]         = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [result, setResult] = useState(null);
+  const [error, setError] = useState(null);
   const [modelInfo, setModelInfo] = useState(null);
-  const [serverOk, setServerOk]   = useState(null);
+  const [serverOk, setServerOk] = useState(null);
 
   // Check server health on mount
   useEffect(() => {
-    axios.get(`${API_BASE}/health`, { timeout: 3000 })
+    axios.get(`${API_BASE}/health`, { timeout: 15000 })
       .then(r => { setServerOk(true); setModelInfo(r.data); })
       .catch(() => setServerOk(false));
 
-    axios.get(`${API_BASE}/model/info`, { timeout: 3000 })
+    axios.get(`${API_BASE}/model/info`, { timeout: 15000 })
       .then(r => setModelInfo(r.data))
-      .catch(() => {});
+      .catch(() => { });
   }, []);
 
   const handleAnalyze = async () => {
@@ -96,9 +96,9 @@ export default function App() {
             <h1>AgentSight Monitor</h1>
           </div>
           <div className="header-sub">
-            {serverOk === true  && <><span className="status-dot"/>Backend online</>}
-            {serverOk === false && <span style={{color:'#ef4444'}}>⚠ Backend offline</span>}
-            {serverOk === null  && <span style={{color:'#64748b'}}>Connecting…</span>}
+            {serverOk === true && <><span className="status-dot" />Backend online</>}
+            {serverOk === false && <span style={{ color: '#ef4444' }}>⚠ Backend offline</span>}
+            {serverOk === null && <span style={{ color: '#64748b' }}>Connecting…</span>}
           </div>
         </div>
       </header>
@@ -127,13 +127,13 @@ export default function App() {
             id="analyze-btn"
           >
             {loading
-              ? <><div className="spinner"/> Analyzing…</>
+              ? <><div className="spinner" /> Analyzing…</>
               : <><span>▶</span> Analyze Trajectory</>
             }
           </button>
 
           {error && (
-            <div className="alert error" style={{marginTop:'1rem', whiteSpace:'pre-wrap'}}>
+            <div className="alert error" style={{ marginTop: '1rem', whiteSpace: 'pre-wrap' }}>
               <span className="alert-icon">⚠</span>
               <span>{error}</span>
             </div>
@@ -141,7 +141,7 @@ export default function App() {
 
           {/* ── Model info card ── */}
           {modelInfo && (
-            <div style={{marginTop:'1.25rem'}}>
+            <div style={{ marginTop: '1.25rem' }}>
               <div className="card-title"><span>⚙</span> Model Info</div>
               <div className="info-grid">
                 <div className="info-row">
@@ -177,7 +177,7 @@ export default function App() {
         </div>
 
         {/* ── Results column ── */}
-        <div style={{display:'flex', flexDirection:'column', gap:'1.5rem'}}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
 
           {/* Verdict */}
           <div className="card">
@@ -230,7 +230,7 @@ export default function App() {
           </div>
 
           {/* Timeline */}
-          <div className="card" style={{flex:1}}>
+          <div className="card" style={{ flex: 1 }}>
             <div className="card-title"><span>📊</span> Step-by-Step Timeline</div>
 
             {!result && (
