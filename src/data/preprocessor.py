@@ -5,8 +5,8 @@ import torch
 
 class StepPreprocessor:
     def __init__(self, model_name="microsoft/deberta-v3-base", max_len=512):
-        # use_fast=True avoids Python memory leaks in DataLoader loops
-        self.tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
+        # use_fast=False is required for DeBERTa-v3 to avoid spm.model parsing errors on Linux
+        self.tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=False)
         self.max_len = max_len
 
     def encode_step(self, query, step):
