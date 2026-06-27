@@ -1,0 +1,10 @@
+.git
+data/
+venv/
+notebooks/
+dashboard/
+dashboard_react/
+__pycache__/
+*.json
+*.pth
+*.pdf
