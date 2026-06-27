@@ -97,7 +97,19 @@ export default function App() {
           </div>
           <div className="header-sub">
             {serverOk === true && <><span className="status-dot" />Backend online</>}
-            {serverOk === false && <span style={{ color: '#ef4444' }}>⚠ Backend offline</span>}
+            {serverOk === false && (
+              <button 
+                onClick={() => {
+                  setServerOk(null);
+                  axios.get(`${API_BASE}/health`)
+                    .then(r => { setServerOk(true); setModelInfo(r.data); })
+                    .catch(err => { console.error('Health Check Failed:', err); setServerOk(false); });
+                }}
+                style={{ background: 'none', border: 'none', color: '#ef4444', cursor: 'pointer', textDecoration: 'underline' }}
+              >
+                ⚠ Backend offline (Click to Retry)
+              </button>
+            )}
             {serverOk === null && <span style={{ color: '#64748b' }}>Connecting…</span>}
           </div>
         </div>
