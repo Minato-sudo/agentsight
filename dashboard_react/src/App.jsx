@@ -49,11 +49,11 @@ export default function App() {
 
   // Check server health on mount
   useEffect(() => {
-    axios.get(`${API_BASE}/health`, { timeout: 15000 })
+    axios.get(`${API_BASE}/health`)
       .then(r => { setServerOk(true); setModelInfo(r.data); })
       .catch(() => setServerOk(false));
 
-    axios.get(`${API_BASE}/model/info`, { timeout: 15000 })
+    axios.get(`${API_BASE}/model/info`)
       .then(r => setModelInfo(r.data))
       .catch(() => { });
   }, []);
